@@ -17,6 +17,8 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import java.io.File;
 import javafx.scene.media.AudioClip;
+import javafx.scene.shape.Circle;
+import javafx.scene.paint.Color;
 
 /**
  * Simulación del sistema solar utilizando JavaFX
@@ -79,7 +81,7 @@ public class SistemaSolar extends Application {
 		
 		fugaz = new Satelite[100];		
 		asteroides = new Satelite[1000];
-		for(int x = 0; x<500; x++){
+		for(int x = 0; x<250; x++){
 			int res = x % 5;
 			switch(res){
 			case 1: asteroides[x] = new Satelite(Satelite.DatosSatelite.ASTEROIDES, sol);
@@ -150,8 +152,10 @@ public class SistemaSolar extends Application {
 		audio.setVolume(0.85);
 		
 		
+		
 		primaryStage.setTitle("Sistema solar");
 		primaryStage.setScene(scene);
+		
 		primaryStage.show();
 	}
 	

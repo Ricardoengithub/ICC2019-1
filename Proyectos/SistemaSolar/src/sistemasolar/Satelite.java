@@ -16,7 +16,7 @@ public class Satelite extends Astro {
 	private static final double ESCALA_RADIO = 10.0;
 	private static final double ESCALA_ORBITA = 400.0;
 	private static final double ESCALA_ORBITA_SATELITE = ESCALA_RADIO * 2;
-	private static final double ESCALA_TIEMPO = 55.0;
+	private static final double ESCALA_TIEMPO = 105.0;
 	
 	/**
 	 * Datos de cada planeta y satélite.
@@ -33,7 +33,8 @@ public class Satelite extends Astro {
 		SATURNO(2.0, ESCALA_ORBITA_SATELITE * 0.055, ESCALA_ORBITA_SATELITE * 0.054966, 0.7,"file:./Planetas/saturno.png"),
 		URANO(1.5, ESCALA_ORBITA_SATELITE * 0.064, ESCALA_ORBITA_SATELITE * 0.063966, 0.8,"file:./Planetas/urano.png"),
 		NEPTUNO(1.5, ESCALA_ORBITA_SATELITE * 0.073, ESCALA_ORBITA_SATELITE * 0.072966, 0.9,"file:./Planetas/neptuno.png"),
-		PLUTON(0.2, ESCALA_ORBITA_SATELITE * 0.07295, ESCALA_ORBITA_SATELITE * 0.086966, 1.0,"file:./Planetas/mercurio.jpg"),															
+		//PLUTON(0.2, ESCALA_ORBITA_SATELITE * 0.07295, ESCALA_ORBITA_SATELITE * 0.086966, 1.0,"file:./Planetas/mercurio.jpg"),															
+		PLUTON(0.8, ESCALA_ORBITA_SATELITE * 0.01895, ESCALA_ORBITA_SATELITE * 0.00966, 0.1,"file:./Planetas/mercurio.jpg"),															
 		
 		LUNA(0.273, ESCALA_ORBITA_SATELITE * 0.00257, ESCALA_ORBITA_SATELITE * 0.002566, 0.0739,"file:./Planetas/luna.png"),
 		SATELITE(0.973, ESCALA_ORBITA_SATELITE * 0.00217, ESCALA_ORBITA_SATELITE * 0.002166, 0.0939,"file:./Planetas/sat.jpg"),

@@ -86,20 +86,43 @@ public class OrbitaTransition extends Transition {
 	@Override
 	protected void interpolate(double frac) {
 		// Coordenadas en la elipse con respecto al foco
-		double t = 2 * Math.PI * frac;
+		double t = 8 * Math.PI * frac;
 		double x = semiejeMayor * Math.cos(t) + 2 * c;
 		double y = semiejeMenor * Math.sin(t);
 		
+		double tpluton =  2 * Math.PI * frac;
+		double xpluton = semiejeMayor * -Math.sin(t) + 2 * c/20 ;
+		double ypluton = semiejeMenor * -Math.cos(t)* 4 ;
+		
 		// Posición del centro del foco con respecto a su nodo padre
 		Node foco = this.satelite.getFoco().getFigura();
+		String nombre = this.satelite.getNombre();
+        if (nombre.compareTo("PLUTON") == 0) { // 
+            //System.exit(0);
+    		Bounds inSceneCoords = foco.localToParent(foco.getBoundsInLocal());	// Esquina superior izquierda
+    		Point2D origen = foco.localToParent(0, 0);
+    		double focoX = (inSceneCoords.getMinX() + inSceneCoords.getMaxX()/2); // Coords del centro
+    		double focoY = (inSceneCoords.getMinY() + inSceneCoords.getMaxY()/2);
+		
+    		// Asignar la translación con respecto al centro del nodo padre
+		
+		
+    		this.satelite.getNodo().setTranslateX(origen.getX() - focoX + xpluton);
+    		this.satelite.getNodo().setTranslateY(origen.getY() - focoY + ypluton);            
+        }else{
+		
+		
 		Bounds inSceneCoords = foco.localToParent(foco.getBoundsInLocal());	// Esquina superior izquierda
 		Point2D origen = foco.localToParent(0, 0);
 		double focoX = (inSceneCoords.getMinX() + inSceneCoords.getMaxX())/2; // Coords del centro
 		double focoY = (inSceneCoords.getMinY() + inSceneCoords.getMaxY())/2;
 		
 		// Asignar la translación con respecto al centro del nodo padre
+		
+		
 		this.satelite.getNodo().setTranslateX(origen.getX() - focoX + x);
 		this.satelite.getNodo().setTranslateY(origen.getY() - focoY + y);
+		}
 	}
     
 }
