@@ -1,1 +1,2 @@
-Introducción a Ciencias de la Computación
+# Introducción a Ciencias de la Computación
+## Calificaciones
