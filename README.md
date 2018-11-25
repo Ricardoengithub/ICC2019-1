@@ -3,6 +3,7 @@
 
 ## Calificaciones
 ### Prácticas
+* Práctica 14 = 10
 * Práctica 13 = 10
 * Práctica 10 = 9.5
 * Práctica 9 = 9.75
