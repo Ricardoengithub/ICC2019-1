@@ -42,9 +42,9 @@ public class Automata extends AnimationTimer {
 
 		GridPane gridPane = new GridPane();
 		
-		for(int x = 0; x < 1200; x++){
+		for(int x = 0; x < 1800; x++){
 			botones[x] = new Button(" ");
-			gridPane.add(botones[x], x%1200, x%30, 30, 1);
+			gridPane.add(botones[x], x%1800, x%30, 30, 1);
 		}
 						
 		System.out.println("1) Actividad Sismica\n2) Propagación de epidemias");
@@ -57,14 +57,12 @@ public class Automata extends AnimationTimer {
 		
 
 		switch(simulation){
-			case 1: Sismos casillas = new Sismos(5, t);
-					casillas.inicio();
-					int[] set = casillas.getCasillas();
-					for(int x = 0; x < 1200; x++){
-						System.out.println(casillas.getIndex(x));
-						
-						
-						switch(casillas.getIndex(x)){
+			case 1: for(int x = 0; x < 1800; x++){		
+						int aleatorio = (int) (Math.random() * 1800);
+						if(aleatorio % 2 == 0 || aleatorio % 3 == 0 || aleatorio % 4 == 0 || aleatorio % 5 == 0){
+							botones[x].setStyle("-fx-background-color: #ffffff; ");
+						}else{
+						switch(aleatorio % 5){
 							case 0: botones[x].setStyle("-fx-background-color: #ffffff; ");
 									break;
 							case 1: botones[x].setStyle("-fx-background-color: #00ff00; ");
@@ -77,13 +75,14 @@ public class Automata extends AnimationTimer {
 									break;
 							default: botones[x].setStyle("-fx-background-color: #ffffff; ");
 									break;									
-						}						
+						}					
+						}	
 					}
-					for(int x = 0; x < t; x++){
-						int castmp = (int) (Math.random() * 1200);
-						int numero = casillas.getIndex(castmp);
-						casillas.setCasilla(castmp, numero+1);						
-					}
+//					for(int x = 0; x < t; x++){
+//						int castmp = (int) (Math.random() * 1200);
+//						int numero = casillas.getIndex(castmp);
+//						casillas.setCasilla(castmp, numero+1);						
+//					}
 
 
 
