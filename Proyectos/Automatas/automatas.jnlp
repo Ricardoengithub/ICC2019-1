@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="automatas.jnlp">
+  <information>
+    <title>Automatas celulares</title>
+    <vendor>Facultad de Ciencias, UNAM</vendor>
+    <description>JavaFXAutomatasApp</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Automatas.jar" size="3942" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="300" height="250" main-class="automatas.Demo"  name="JavaFXAutomatasApp" />
+  <update check="background"/>
+</jnlp>

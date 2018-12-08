@@ -28,7 +28,10 @@ public class Demo extends Application {
         Automata a = new Automata(root);
         a.start();
 
+
         primaryStage.show();
+
+        //a.actualiza();
     }
     
     /**
