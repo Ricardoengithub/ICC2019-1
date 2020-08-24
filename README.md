@@ -1,5 +1,5 @@
 # Introducción a Ciencias de la Computación
-* Profesor: Verónica Esther Arriola Ríos
+* Profesora: Verónica Esther Arriola Ríos
 
 ## Calificaciones
 ### Prácticas
